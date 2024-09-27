@@ -83,7 +83,7 @@ void AngleHarmonicChiral2D::compute(int eflag, int vflag)
     c = -delx1*delx2 - dely1*dely2;
     s = delx1*dely2 - dely1*delx2;
 
-    tk = 2*k[type] * (atan2(s,c) - theta0[type]);
+    tk = k[type] * (atan2(s,c) - theta0[type]);
 
     f1[0] = tk * (c*dely2+s*delx2) / (c*c+s*s);
     f1[1] = tk * (s*dely2-c*delx2) / (c*c+s*s);
